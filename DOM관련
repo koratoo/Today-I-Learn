@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function add(){
+            var header=document.createElement('h3');//요소 노드 생성
+            var textNode=document.createTextNode('내 이름은 오라클입니다.');//텍스트 노드 생성
+            
+            header.appendChild(textNode);
+            document.body.appendChild(header);//<body></body>사이 
+        }
+    </script>
+</head>
+<body>
+    <a href="#" onclick="add()">당신의 이름은 무엇입니까?</a>
+</body>
+</html>
+
+
