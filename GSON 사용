@@ -1,0 +1,41 @@
+package kr.project;
+
+import kr.soldesk.BookDTO;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+public class Project01_A {
+
+	public static void main(String[] args) {
+		
+		//object(BookDTO) -> JSON(String)
+		BookDTO dto = new BookDTO("JAVA",21000,"Soldesk",670);
+		Gson g = new Gson();
+		String json=g.toJson(dto);
+		System.out.println(dto);
+		
+		//JSON(String)->Object(BookDTO)
+		BookDTO dto1 = g.fromJson(json, BookDTO.class);
+		System.out.println(dto1);
+		System.out.println(dto1.getTitle()+"\t"+dto1.getPrice());
+		
+		//List<BookDTO> -> JSON(String)
+		List<BookDTO> list = new ArrayList<>();
+		list.add(new BookDTO("JSP",25000,"Soldesk",570));
+		list.add(new BookDTO("Spring",31000,"Soldesk",750));
+		list.add(new BookDTO("Python",18000,"Soldesk",420));
+		System.out.println("-------------------------------");
+		String listJson = g.toJson(list);
+		System.out.println(listJson);
+		
+		//JSON(String) -> List<BookDTO>
+		List<BookDTO> list1 = g.fromJson(listJson, new TypeToken<List<BookDTO>>(){}.getType());//reflect기법
+		for(BookDTO vo:list1) {
+			System.out.println(vo);
+		}
+	}
+}
