@@ -1,0 +1,5 @@
+int num1 = 5;
+int num2 = -5;
+
+~num1 => 6;
+~num2 => -4;
