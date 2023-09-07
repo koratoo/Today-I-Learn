@@ -1,0 +1,23 @@
+sudo :  일반 사용자가 루트 권한을 사용
+/etc/passwd : 사용자 계정 정보, 비밀번호는 없음
+/etc/shadow : 비밀번호가 있음
+
+UID 로 판단한다.
+stdin : standard input
+
+비어 있지 않은 디렉터리 삭제 : rm -r
+pwd : print working directory
+
+touch a : a라는 파일 생성
+
+cd .. : 절대 경로 home 디렉터리로 이동
+cd - : 최근 작업한 디렉터리로 이동
+
+-p : 디스크 할당량 설정을 다른 사용자와 동일하게 설정
+eject -r [디바이스명] : 시디롬을 마운트 해제
+
+fsck : 파일시스템의 무결성을 점검하고 대화식으로 복구
+
+PS1 : 셸 프롬프트 선언시 사용하는 변수
+PS2 : 2차 셸 프롬프트 선언시 변수
+TERM : 터미널의 종류 이름
