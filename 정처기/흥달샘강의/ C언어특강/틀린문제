@@ -1,0 +1,17 @@
+	#include<stdio.h>     
+	int main() {
+		int a = 10;
+		int b = 15;
+		int c = a++ + --b;
+		int d = ++a + b--;
+        
+ 
+		printf("%d\n",a); 
+		printf("%d\n", b);  
+		printf("%d\n", c); 
+		printf("%d", d); 
+		return 0;
+	}
+
+c = 24;
+d = 26;
