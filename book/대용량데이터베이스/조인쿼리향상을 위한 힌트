@@ -1,0 +1,5 @@
+ordered
+
+SELECT /*+ ORDERD*/... FROM TAB1,TAB2,TAB3 WHERE ... 
+
+P304내용
