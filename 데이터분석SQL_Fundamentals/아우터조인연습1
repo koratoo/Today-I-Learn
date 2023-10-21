@@ -1,0 +1,21 @@
+/************************************
+
+	조인 실습 - Outer 조인.
+
+************************************/
+
+-- 주문이 단 한번도 없는 고객 정보 구하기
+
+-- 내가 짠 코드
+select c.customer_id  ,c.customer_id, o.order_id  
+	from nw.customers c 
+	left outer join nw.orders o on c.customer_id  = o.customer_id 
+	where o.order_id is null ;
+
+-- 정답 코드
+select * 
+from nw.customers a
+	left join nw.orders b on a.customer_id = b.customer_id 
+where b.customer_id is null;
+
+ 
