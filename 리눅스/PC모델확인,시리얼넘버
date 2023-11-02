@@ -1,0 +1,4 @@
+wmic csproduct
+
+IdentifyingNumber : 시리얼 넘버
+Version : PC모델 
