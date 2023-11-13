@@ -1,0 +1,9 @@
+핸들러 매핑의 역할
+1. URL 요청정보로부터 컨트롤러 빈을 찾아준다.
+2. 핸들러 인터셉터를 적용해준다.
+-서블릿 필터보다 더 정교하고 편리하게 인터셉터를 만들 수 있다.
+
+HandlerInterceptor
+1. boolean preHandler
+2. void postHandler
+3. void afterCompletion
