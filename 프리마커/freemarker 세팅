@@ -1,0 +1,5 @@
+경로가 설정된 파일을 참조한다.
+
+<bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+	<property name="templateLoaderPath" value="/WEB-INF/freemarker/"/>
+</bean>
