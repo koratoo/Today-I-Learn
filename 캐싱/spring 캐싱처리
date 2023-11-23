@@ -1,0 +1,6 @@
+//캐시 저장 (Key 지정 시)
+@Cacheable(value = "cacheValue", key = "#data.cache")
+public void Test(){
+
+  System.out.print("캐시 관련 태그");
+}
