@@ -1,0 +1,1 @@
+CollectionUtils.isEmpty()는 java Collection(List, Map, Set)의 종류의 값들의 존재 여부를 판단하는 메서드입니다.
