@@ -5,3 +5,6 @@
 nullPointException이 발생하지 않는다.
 
 실무에서 StringUtils를 사용한다.
+
+참고 블로그
+https://velog.io/@mooh2jj/JAVA-StringUtils-%EC%82%AC%EC%9A%A9%EB%B2%95
