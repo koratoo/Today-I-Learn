@@ -1,0 +1,7 @@
+※ 동작 되는 비교문
+1. <if test = 'userId.equals("kim")'>  
+2. <if test = 'userId == "kim"'>
+3. <if test = 'userId == "kim"'>
+4. <if test = "'kim'.equals(userId)">
+5. <if test = "userId == 'kim'.toString()">
+6. <if test = "userId eq 'kim'.toString()">
