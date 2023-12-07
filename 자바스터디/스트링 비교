@@ -1,0 +1,4 @@
+문자열.equals(VO.get());
+
+이런식으로 비교해준다.
+VO.get().equals(문자열)이 되면 nullPointException이 발생할 수 있기 때문!
