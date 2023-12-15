@@ -1,0 +1,13 @@
+if(AdminConstants.[변수] == Session.[변수])
+
+AdminConstants라는 캐시안에 저장된 [변수]와 세션에 있는 [변수]를 비교한다.
+실무에서 이 정도 비교법은 허용된다.
+
+
+AdminConstants.[변수] == 1
+Session.[변수] == 1
+
+이런식의 비교는 X 하드코딩이라 한다.
+
+세션 설정이 안되어 있으면 컨트롤러에서 
+Session session = AdminConstants.Utils 같은데서 끌어다 쓴다.
