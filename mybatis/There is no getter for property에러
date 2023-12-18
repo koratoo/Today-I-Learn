@@ -1,0 +1,4 @@
+There is no getter for property named [컬럼명]
+
+보통 getter, setter가 안걸려서 해당 mybatis에러가 난다고 생각하겠지만
+이클립스의 buildAutomatically가 안켜져 있어서 적용이 안돼 생긴 에러였다.
