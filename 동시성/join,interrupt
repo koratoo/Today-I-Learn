@@ -1,0 +1,49 @@
+■ 스레드 join() 강의
+
+​
+
+주요 포인트
+
+조인을 어떤 스레드에 걸어야 하는가 
+
+어떤 스레드가 영향을 받는가
+
+Thread mainThread = Thread.currentThread();
+
+인터럽트, wait, join
+
+​
+
+■  interrupted() -1 (13:56 까지 들음)
+
+①static boolean interrupted
+
+스레드의 인터럽트 상태를 반환하는 정적 메서드
+
+인터럽트 상태 변경이 가능하다.
+
+​
+
+​
+
+②boolean isInterrupted
+
+인터럽트 상태를 반환하는 메서드
+
+1번과 달리 변경이 불가능하다.
+
+​
+
+③InterrutedException
+
+interrupt() 메커니즘의 일부이며 대기나 차단 등 블록킹 상태에 있거나 블록킹 상태를 만나는 시점의 스레드에
+
+인터럽트 할 때 발생하는 예외이다.
+
+​
+
+※ 발생하는 케이스
+
+1) Thread.sleep(), Thread.join(), Object.wait()
+
+2) Future.get(), BlockingQueue.take()
