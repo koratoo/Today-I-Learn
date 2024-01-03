@@ -1,0 +1,3 @@
+한 번에 하나씩 데이터를 읽어 Chunk라는 덩어리를 만든 뒤, Chunk 단위로 트랜잭션을 다루는 것
+Chunk 단위로 트랜잭션을 수행하기 때문에 실패할 경우엔 해당 Chunk만큼만 롤백이 되고, 이전에 커밋된 트랜잭션 범위까지는 반영이 된다.
+Chunk 기반 스텝은 ItemReader, ItemProcessor, ItemWriter라는 3개의 주요 부분으로 구성될 수 있다.
