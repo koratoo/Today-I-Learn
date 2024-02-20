@@ -1,0 +1,7 @@
+일반적으로 DB에 대한 트래픽 분산을 위해서 Mysql Replication을 통해서 트래픽 집중 문제를 해결할 수 있다.
+
+MySQL Master Slave
+Insert / Update / Delete
+
+MySQL Slave Server
+Select
