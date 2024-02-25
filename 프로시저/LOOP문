@@ -1,0 +1,17 @@
+--사용법
+LOOP
+처리문;
+EXIT[조건];
+END LOOP;
+
+--예제
+DECLARE
+NUM1 NUMBER :=1;
+
+BEGIN 
+    LOOP
+    DMBS_OUTPUT.PUT_LINE(NUM1);
+    NUM1 := NUM+1;
+    EXIT WHEN NUM1 > 10;
+    END LOOP;
+END;
