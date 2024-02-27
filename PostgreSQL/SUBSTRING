@@ -1,0 +1,6 @@
+[EXAMPLE]
+SELECT SUBSTRING ('PostgreSQL', 1, 8);
+
+
+[OUTPUT]
+PostgreS
