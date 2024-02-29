@@ -16,4 +16,14 @@ return jdbcTemplate.update(sql);
 
 을 사용하여 문제를 해결했습니다.
 
+## 그 외의 해결책
+GPT 3.5버전에 물어본 후 답변 내용은
+String sql = "SELECT column1, column2 FROM \"my schema\".\"my_table\" WHERE condition = ?";
+List<Map<String, Object>> result = jdbcTemplate.queryForList(sql, yourParameterValue);
+이런식으로 사용할 수 있다고 합니다. 
+
+
+## 마무리
+현재로선 String.format을 사용하여 sql변수를 만든 후 jdbcTemplate의 update 메서드를 진행하는 것이 좋다고 생각됩니다.
+
 다른 좋은 해결책이 있다면 공유 부탁드립니다.
