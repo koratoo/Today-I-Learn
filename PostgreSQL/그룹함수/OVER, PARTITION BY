@@ -1,0 +1,8 @@
+SELECT
+    분석함수 OVER([PARTITION BY 칼럼] [ORDER BY 칼럼] [WINDOWING 절])
+FROM 테이블;
+
+
+분석함수에 대한 조절을 OVER절 안에서 한다.
+
+PARTITION BY : GROUP BY와 동일하게 그룹지어 결과를 출력한다.
