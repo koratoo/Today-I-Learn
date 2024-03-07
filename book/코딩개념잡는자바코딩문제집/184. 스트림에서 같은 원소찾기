@@ -1,0 +1,4 @@
+List<String> melons = Arrays.asList("Gac", "Cataloupe", "Hemi", "Gac", "Gac");
+
+boolean isAnyGac = melons.stream()
+                        .anyMatch(m -> m.equals("Gac"));//true
