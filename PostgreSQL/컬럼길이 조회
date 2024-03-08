@@ -1,0 +1,1 @@
+select max(char_length(컬럼명))  from 테이블명;
