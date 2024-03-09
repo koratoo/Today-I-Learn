@@ -1,0 +1,8 @@
+1. 기본 제공되는게 아니라서 확장 모듈을 설치해준다.
+CREATE EXTENTION IF NOT EXISTS TABLEFUNC;
+
+2. 사용형식
+CROSSTAB (TEXT SOURCE_SQL, TEXT CATEGORY_SQL)
+
+3. 크로스탭 함수는?
+피봇 결과 집합의 각 셀에 할당할 실제 집계 값을 산출하는 SQL문장이다.
