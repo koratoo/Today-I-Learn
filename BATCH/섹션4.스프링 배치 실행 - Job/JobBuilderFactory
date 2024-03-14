@@ -1,0 +1,4 @@
+1. JobBuilderFactory
+-JobBuilder를 생성하는 팩토리 클래스로서 get(String name)메서드 제공
+-jobBuilderFactory.get("jobName")
+  "jobName"은 스프링 배치가 job을 실행시킬 때 참조하는 Job이름
