@@ -1,0 +1,4 @@
+CPU 캐시에 쓰기를 하면
+
+Write-Through 그 즉시 Main Memory에 씀
+Write-Back(Lazy Write) Main Memory에 지연된 쓰기를 함.
