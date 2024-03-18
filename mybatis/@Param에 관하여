@@ -1,0 +1,5 @@
+@Param은 파라미터가 2개이상인 경우 mybatis가 파라미터를 못읽게 되어 쓰게 된다.
+
+public void method(@Param("value1") value1, @Param("value2") value2) 이런식으로 쓰게 된다.
+
+https://popo015.tistory.com/99
