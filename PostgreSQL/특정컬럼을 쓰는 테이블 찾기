@@ -1,0 +1,4 @@
+SELECT table_schema, table_name
+FROM information_schema.columns
+WHERE column_name = '[컬럼명]'
+AND table_schema IN ('스키마1', '스키마2');
