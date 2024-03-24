@@ -1,0 +1,12 @@
+id : 매핑 구문에서 결과 매핑을 사용할 때 구분하기 위한 아이디.
+type : 결과 매핑을 적용하는 대상 객체 타입. 자바타입을 지정한다. 대개 Map이나 자바 모델 클래스를 지정한다.
+extends : 자바의 상속처럼 공통 속성을 가진 결과 매핑을 정의하고 대상 객체마다 다른 속성만을 가진 결과 매핑을 선언할 수 있다.
+
+
+하위 엘리먼트
+constructor
+id
+result 
+association
+collection
+descriminator
