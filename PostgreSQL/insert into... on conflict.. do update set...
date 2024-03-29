@@ -1,0 +1,1 @@
+INSERT INTO 테이블 VALUES(값,값1,,,, 값N) ON CONFLICT (중복체크할 컬럼) DO UPDATE SET 업데이트 할 컬럼
