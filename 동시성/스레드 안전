@@ -1,0 +1,10 @@
+단일 스레드 
+HashSet
+TreeSet
+LinkedHashSet
+BitSet
+EnumSet
+
+다중 스레드
+ConcurrentSkipListSet(정렬된 세트)
+CopyOnWriteArraySet(자주 읽고 거의 업데이트하지 않음)
