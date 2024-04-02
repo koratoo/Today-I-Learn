@@ -1,0 +1,9 @@
+Flashback 은 일종의 휴지통 개념이다.
+Flashback의 사이즈만큼 과거 데이터를 보관하고 있으며  변경이 자주 발생하는 테이블은 복구 가능시점이 짧을 수 있다.
+
+SELECT *
+  FROM test_tbl AS OF TIMESTAMP(SYSTIMESTAMP - INTERVAL '10' MINIUTE)
+WHERE id = '1234'
+
+10분 이전의 데이터가 조회된다.
+
