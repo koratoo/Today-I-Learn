@@ -1,0 +1,4 @@
+function to_char does not exist
+
+TO_CHAR
+숫자나 날짜를 특정 포맷으로 변경할때 쓰인다.
