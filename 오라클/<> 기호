@@ -1,0 +1,7 @@
+!= 랑 똑같음
+
+
+예를 들면
+select * from table1 
+where ob_name <> 'GitHub'
+
