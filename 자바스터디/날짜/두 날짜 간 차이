@@ -1,0 +1,6 @@
+LocalDate day1 = LocalDate.of(2024, 1, 1);
+LocalDate day2 = LocalDate.of(2024, 3, 1);
+
+ChronoUnit : JDK 8이후 사용
+
+long betweenInDays = Math.abs(ChronoUnit.DAYS.between(day1, day2));
