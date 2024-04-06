@@ -1,0 +1,9 @@
+TemporalAdjuster 클래스는 함수형 인터페이스로서 Temporal 객체를 조정하는 전략을 정의한다.
+
+firstDayOfMonth : 이번 달의 첫 번째 날을 반환한다.
+lastDayOfMonth : 이번 달의 마지막 날을 반환한다.
+firstDayOfNextMonth : 다음 달의 첫 번째 날을 반환한다.
+firstDayOfNextYear : 다음 해의 첫 번째 날을 반환한다.
+
+LocalDate firstDayOfFeb
+  = date.with(TemporalAdjusters.firstDayOfMonth());
