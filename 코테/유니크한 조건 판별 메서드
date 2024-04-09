@@ -1,0 +1,10 @@
+isMinUnique
+
+public Boolean isMinUnique(int[] fruit) {
+  int cnt = 0;
+  int min = getMin(fruit);
+  for (int x : fruit) {
+     if(x==min) cnt++;
+  }
+ return cnt == 1;
+}
