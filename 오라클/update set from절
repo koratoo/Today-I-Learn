@@ -1,0 +1,6 @@
+UPDATE 테이블명 A
+   SET 컬럼명
+  FROM
+  (SELECT 절) AS B
+WHERE A.ID = B.ID
+   
