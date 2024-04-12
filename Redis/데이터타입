@@ -2,4 +2,15 @@ Strings 문자열, 숫자, serialized object등을 저장
 
 명령어 
 $ SET lecture inf-redis
-$ MSET price 100 lan ko
+$ MSET price 100 language ko // 멀티셋 price : 100, language :ko
+$ MGET lecture price language // 저장했던 세 개의 키가 출력된다.
+1) "lecture inf-redis"
+2) "100"
+3) "ko"
+
+INCR price
+101
+INCRBY price 9
+110
+
+
