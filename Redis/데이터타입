@@ -1,0 +1,5 @@
+Strings 문자열, 숫자, serialized object등을 저장
+
+명령어 
+$ SET lecture inf-redis
+$ MSET price 100 lan ko
