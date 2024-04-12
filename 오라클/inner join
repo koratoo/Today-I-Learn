@@ -1,0 +1,5 @@
+SELECT <열 목록>
+FROM <첫 번째 테이블>
+    INNER JOIN <두 번째 테이블>
+    ON <조인 조건>
+[WHERE 검색 조건]
