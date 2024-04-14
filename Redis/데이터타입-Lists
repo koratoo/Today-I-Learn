@@ -1,0 +1,11 @@
+Lists String을 Linked List로 저장
+
+명령어 
+      LPUSH queue job1 job2 job3
+      RPOP queue
+
+      LPUSH stack job1 job2 job3
+      LPOP stack
+
+      LPUSH queue job1 job2 job3
+      LRANGE queue -2 -1
