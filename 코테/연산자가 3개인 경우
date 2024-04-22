@@ -1,0 +1,11 @@
+* + - 
+3개의 연산자가 사용되는 경우 굳이 재귀를 사용하지 않아도 다음과 같이 직접 우선순위를 정해줄 수 있다.
+
+private static final String[][] precedences = {
+      "+-*".split(""),
+      "+*-".split(""),
+      "-+*".split(""),
+      "-*+".split(""),
+      "*+-".split(""),
+      "*-+".split(""),
+};
