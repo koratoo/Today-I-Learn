@@ -1,0 +1,12 @@
+레디스의 Hash 자료형은 자바의 HashMap과 동일하게 작동한다.
+
+> hset user:1000 username antirez birthyear 1977 verified 1(integer 3)
+> hget user:1000 username "antirez"
+> hget user:1000 birthyear "1977"
+> hget user:1000 
+1) "username"
+2) "antirez"
+3) "birthyear"
+4) "1977"
+5) "verified"
+6) "1"
