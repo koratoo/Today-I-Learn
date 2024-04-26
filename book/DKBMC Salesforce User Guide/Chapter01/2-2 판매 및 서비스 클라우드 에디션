@@ -2,3 +2,12 @@
 2. Salesforce Lightning Professional : 모든 규모의 팀을 위한 완벽한 CRM
 3. Salesforce Lightning Enterprise : 비즈니스 요구사항에 맞게 커스텀 개발이 가능한 CRM
 4. Salesforce Lightning Unlimited : 무제한의 용도로 확장 가능한 CRM
+
+
+1,2 는 기본적으로 제공하는 표준 기능을 사용해야 하며, 
+3,4 는 커스텀 개발이 가능한 에디션이다.
+
+
+역할에 따라 라이선스를 효율적으로 배분가능하다.
+
+100명의 직원 중 세일즈포스에 접근하는 인원이 30명일 경우 25명에게 2번을 부여, 5명에게 3번을 부여하는 식이다.
