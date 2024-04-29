@@ -1,0 +1,10 @@
+1. JOIN ON 절에 IS NULL 체크 관련 쿼리문 예시
+select *from TB_PARENT P with(nolock)	left outer join TB_CHILD C 
+with(nolock)		
+on P.pid = C.pid 		and C.pid is null
+
+결과: JOIN ON 조건문은 테이블들이 서로 JOIN되는 과정에서 적용된다. 
+TB_CHILD 테이블의 pid 컬럼값이 NULL인 것은 없을 것이며 left outer join이 되고 나서야
+NULL값이 생성되기 때문에, 위의 JOIN ON 조건은 항상 false가 되어 LEFT OUTER JOIN문은 왼쪽 테이블(TB_PARENT)의 
+모든 ROW를 반환할 때, 오른쪽 테이블(TB_CHILD) 관련 컬럼값을 NULL로 채워 반환한다.
+따라서, 자식이 없는 부모 데이터를 찾을 수 없다.
