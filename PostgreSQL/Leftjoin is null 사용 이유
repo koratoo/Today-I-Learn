@@ -16,3 +16,7 @@ with(nolock)
 on P.pid = C.pid 		where C.pid is null
 
 따라서, 자식이 없는 부모 데이터를 찾을 수 있다.
+
+
+참조
+https://soohyeon317.tistory.com/entry/JOIN-ON-%EC%A0%88%EA%B3%BC-WHERE-%EC%A0%88%EC%97%90-IS-NULL-%EC%A1%B0%EA%B1%B4-%EC%82%AC%EC%9A%A9-%EC%8B%9C%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90
