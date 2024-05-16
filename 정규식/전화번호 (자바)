@@ -1,0 +1,31 @@
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+public class PhoneNumberValidator {
+    // 전화번호 정규식 패턴 (국제 표준)
+    private static final String PHONE_NUMBER_REGEX = "^\\+?[1-9]\\d{1,14}$";
+    private static final Pattern PHONE_NUMBER_PATTERN = Pattern.compile(PHONE_NUMBER_REGEX);
+
+    public static boolean isValidPhoneNumber(String phoneNumber) {
+        if (phoneNumber == null) {
+            return false;
+        }
+        Matcher matcher = PHONE_NUMBER_PATTERN.matcher(phoneNumber);
+        return matcher.matches();
+    }
+
+    public static void main(String[] args) {
+        // 테스트 예제
+        String[] testPhoneNumbers = {
+            "+1234567890",
+            "+919876543210",
+            "9876543210",      // 잘못된 형식
+            "+1-800-555-5555", // 잘못된 형식
+            "+441234567890"
+        };
+
+        for (String phoneNumber : testPhoneNumbers) {
+            System.out.println(phoneNumber + ": " + isValidPhoneNumber(phoneNumber));
+        }
+    }
+}
