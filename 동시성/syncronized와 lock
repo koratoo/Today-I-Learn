@@ -1,0 +1,72 @@
+1. Synchronized 
+
+자바에서 기본적으로 제공하는 동기화 메커니즘이다.
+a) 간단한 동기화가 필요할때
+b) 메서드 수준의 동기화가 필요할 때
+c) 블로수준의 동기화가 필요할 때 
+사용가능하다.
+
+public class Counter {
+    private int count = 0;
+
+    // 메서드 수준 동기화
+    public synchronized void increment() {
+        count++;
+    }
+
+    // 블록 수준 동기화
+    public void decrement() {
+        synchronized (this) {
+            count--;
+        }
+    }
+
+    public int getCount() {
+        return count;
+    }
+}
+
+
+
+2. Lock 인테페이스 (특히 ReentrantLock)
+
+Lock 인터페이스는 더 복잡한 동기화 시나리오를 다룰 때 유용하다.
+a) 보다 정교한 동기화 제어가 필요할 때
+b) 동기화에 대한 명시적 잠금/해제 제어
+syncronized는 자동으로 잠금을 설정해제 하지만 Lock인터페이스는 명시적으로 잠금을 설정하고 해제해야한다.
+이를 통해 동기화 제어를 세밀할게 할 수 있다.
+3. 공정성 정책, ReentrantLock은 공정성 정책을 설정할 수 있다.
+
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class Counter {
+    private int count = 0;
+    private final Lock lock = new ReentrantLock();
+
+    public void increment() {
+        lock.lock();
+        try {
+            count++;
+        } finally {
+            lock.unlock();
+        }
+    }
+
+    public void decrement() {
+        lock.lock();
+        try {
+            count--;
+        } finally {
+            lock.unlock();
+        }
+    }
+
+    public int getCount() {
+        return count;
+    }
+}
+
+
+요약
+간단한 경우 synchronized를 복잡한 경우 Lock을 사용한다.
