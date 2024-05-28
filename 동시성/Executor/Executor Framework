@@ -1,0 +1,7 @@
+1.Executor
+Executor Framework의 핵심 인터페이스로서 단일 메서드 execute를 정의하고 있으며 작업을 제출하면 Executor구현체가 적절한 스레드를
+생성하고 작업을 실행한다.
+
+
+2. ExecutorService
+Executor의 확장 버전으로서 작업의 제출과 스레드 풀의 종료를 관리하기 위한 메서드들을 추가로 제공한다.
