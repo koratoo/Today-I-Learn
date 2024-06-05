@@ -11,3 +11,19 @@ Characteristics of Callable
 2. You can throw CheckedException exceptions.
 3. Used for tasks that return results and require exception handling.
 4. Return the result when the operation is complete and track the result with Future.
+
+
+[Example Code]
+
+class RunnableEx implements Runnable {
+  public void run() {
+    //no results or Exception
+ }
+}
+
+class CallableEx implements Callable(Integer) {
+  public Integer call() throws Exception {
+    //results & Exception
+    return 10;
+ }
+}
