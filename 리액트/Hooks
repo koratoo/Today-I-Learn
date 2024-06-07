@@ -1,0 +1,6 @@
+Hooks는 리액트 v16.8에 새로 도입된 기능이다.
+함수형 컴포넌트에서도 상태관리를 할 수 있는 useState
+렌더링 직후 작업을 설정하는 useEffect 등의 기능등을 제공한다.
+
+
+https://velog.io/@velopert/react-hooks
