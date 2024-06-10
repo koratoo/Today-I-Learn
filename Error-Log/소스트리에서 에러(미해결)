@@ -11,3 +11,7 @@ fetch-pack: unexpected disconnect while reading sideband packet
 fatal: early EOF
 fatal: fetch-pack: invalid index-pack output
 오류가 나면서 완료됨. 
+--------------------------[해석]-------------------------------
+
+경고: 호스트 제공자의 자동 detection 시간이 너무 오래 걸렸습니다(>2000ms)
+warning: 자세한 내용은 https://aka.ms/gcm/autodetect 를 참조하십시오.
