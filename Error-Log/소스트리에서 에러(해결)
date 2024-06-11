@@ -20,7 +20,7 @@ fatal: fetch-pack: invalid index-pack output
 경고: 호스트 제공자의 자동 detection 시간이 너무 오래 걸렸습니다(>2000ms)
 warning: 자세한 내용은 https://aka.ms/gcm/autodetect 를 참조하십시오.
 --------------------------------------------------------------
-STS에서는 
+STS
 Truncated chunk (expected size: 16,369; actual size: 1,473)
 
 --------------------------------------------------------------
