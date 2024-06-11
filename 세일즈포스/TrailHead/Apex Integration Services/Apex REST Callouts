@@ -1,0 +1,10 @@
+REST callouts are based on HTTP.
+-------------Simple Sample Code-------------------
+Http http = new Http();
+HttpRequest req = new HttpRequest();
+req.setEndpoint('https://urls');
+req.setMethod('GET');
+HttpResponse resp = http.send(req);
+if(resp.getStatusCode() == 200) {
+   //do action code here
+}
