@@ -1,4 +1,7 @@
 상황 : 깃랩에서 pull을 받아오는데 에러가 떴다.
+툴 : 소스트리, STS
+----------------------------------------------------------------
+소스트리
 
 warning: auto-detection of host provider took too long (>2000ms)
 warning: see https://aka.ms/gcm/autodetect for more information.
