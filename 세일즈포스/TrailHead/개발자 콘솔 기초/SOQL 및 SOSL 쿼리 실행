@@ -1,0 +1,12 @@
+Debug(디버그) | Open Execute Anonymous Window(익명 실행 창 열기)를 선택
+-----------------------------정답--------------------------------------------
+Contact[] theseContacts = [SELECT Name, Phone, Email, Description FROM Contact
+                           WHERE (Department='Mission Control')
+                           ORDER BY Name];
+// Log a count of how many contacts were found
+System.debug(theseContacts.size() + ' contact(s) returned.');
+// Log all values in the array of contacts
+for(Contact c : theseContacts){
+	System.debug(c.name);
+}
+---------------------------------------------------------------------------
