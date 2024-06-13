@@ -1,0 +1,24 @@
+Answer
+
+
+@isTest
+public class TestRestrictContactByName {
+
+    @isTest
+    static void TestRestrictContactByName () {
+        
+        Test.startTest();
+        Contact ct = new Contact(lastName = 'Test Contact');
+        insert ct;
+        Test.stopTest();
+    }
+    
+     @isTest
+    static void TestRestrictContactByNameInvalid () {
+       
+        Test.startTest();
+         Contact ct = new Contact(lastName = 'INVALIDNAME');
+        insert ct;
+        Test.stopTest();
+    }
+}
