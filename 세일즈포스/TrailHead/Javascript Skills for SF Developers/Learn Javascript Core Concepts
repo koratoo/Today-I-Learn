@@ -1,0 +1,16 @@
+type coercion 형 변환
+
+Under what circumstance is it acceptable to use implicit type coercion?
+
+
+(Example)
+let num1 = 9 * "3";
+console.log(num1); // 27 (a number)
+let num2 = 9 + "3";
+console.log(num2); // "93" (a string)
+
+
+false == ""; // true
+false == "0"; // true
+"" == "0"; // false
+[0] == 0; // true
