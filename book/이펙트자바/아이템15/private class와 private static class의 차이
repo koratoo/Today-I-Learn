@@ -1,0 +1,48 @@
+private class와 private static class의 차이는 주로 사용되는 컨텍스트와 메모리 관리 방식에 있다. 두 가지 모두 Java에서 클래스의 가시성을 제어하기 위해 사용되지만, 각각의 사용 목적과 동작 방식이 다르다.
+
+1. private class
+정의 및 사용: private class는 주로 내부 클래스(Inner Class)로 사용된다. 이는 외부 클래스 내부에 정의되며, 외부 클래스의 인스턴스와 밀접한 관계를 가진다.
+인스턴스 관계: private class는 외부 클래스의 인스턴스에 종속된다. 따라서 내부 클래스의 인스턴스를 생성하려면 외부 클래스의 인스턴스가 필요하다.
+접근 제어: private 접근 제어자는 해당 클래스가 오직 외부 클래스 내부에서만 접근 가능하도록 한다.
+
+public class OuterClass {
+    private class InnerClass {
+        // Inner class methods and fields
+    }
+
+    public void createInnerInstance() {
+        InnerClass inner = new InnerClass();
+    }
+}
+
+
+2. private static class
+정의 및 사용: private static class는 정적 내부 클래스(Static Nested Class)로 사용된다. 이는 외부 클래스 내부에 정의되지만, 외부 클래스의 인스턴스에 종속되지 않는다.
+인스턴스 관계: private static class는 외부 클래스의 인스턴스 없이 독립적으로 생성할 수 있다. 외부 클래스의 정적 멤버처럼 동작한다.
+접근 제어: private 접근 제어자는 해당 클래스가 오직 외부 클래스 내부에서만 접근 가능하도록 한다. 그러나 클래스 자체는 외부 클래스의 인스턴스와 무관하게 존재한다.
+
+public class OuterClass {
+    private static class StaticNestedClass {
+        // Static nested class methods and fields
+    }
+
+    public void createStaticNestedInstance() {
+        StaticNestedClass nested = new StaticNestedClass();
+    }
+}
+
+
+주요 차이점 정리
+인스턴스 종속성:
+
+private class는 외부 클래스의 인스턴스에 종속된다.
+private static class는 외부 클래스의 인스턴스에 종속되지 않는다.
+메모리 관리:
+
+private class는 외부 클래스의 인스턴스와 함께 메모리에 로드된다.
+private static class는 외부 클래스의 인스턴스와 독립적으로 로드될 수 있다.
+사용 용도:
+
+private class는 외부 클래스의 인스턴스가 필요할 때 사용된다.
+private static class는 외부 클래스의 인스턴스와 무관하게 독립적으로 동작해야 할 때 사용된다.
+이 차이점을 이해하면, 특정 상황에서 어떤 형태의 내부 클래스를 사용하는 것이 더 적절한지 판단할 수 있다.
