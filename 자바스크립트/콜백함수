@@ -1,0 +1,21 @@
+콜백 함수의 개념
+정의: 콜백 함수는 다른 함수에 인수로 전달되어 실행되는 함수다.
+용도: 비동기 작업(예: HTTP 요청, 타이머, 파일 읽기 등)의 결과를 처리하거나, 특정 이벤트가 발생했을 때 실행할 코드를 정의하는 데 사용되다.
+
+
+콜백 함수의 사용 예시
+
+1. 비동기 작업
+비동기 작업이 완료된 후 콜백 함수를 호출하여 결과를 처리하는 예시
+    function fetchData(callback) {
+        setTimeout(() => {
+            const data = { name: "John", age: 30 };
+            callback(data);
+        }, 1000);
+    }
+    
+    function handleData(data) {
+        console.log("Data received:", data);
+    }
+    
+    fetchData(handleData);
