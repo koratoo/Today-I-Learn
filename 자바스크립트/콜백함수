@@ -1,9 +1,9 @@
-콜백 함수의 개념
+## 콜백 함수의 개념
 정의: 콜백 함수는 다른 함수에 인수로 전달되어 실행되는 함수다.
 용도: 비동기 작업(예: HTTP 요청, 타이머, 파일 읽기 등)의 결과를 처리하거나, 특정 이벤트가 발생했을 때 실행할 코드를 정의하는 데 사용된다.
 
 
-콜백 함수의 사용 예시
+## 콜백 함수의 사용 예시
 
 1. 비동기 작업
 비동기 작업이 완료된 후 콜백 함수를 호출하여 결과를 처리하는 예시
@@ -26,3 +26,65 @@
     document.getElementById("myButton").addEventListener("click", function() {
         alert("Button clicked!");
     });
+
+## 콜백 함수의 장점과 단점
+### 장점
+비동기 작업 처리: 콜백 함수를 사용하여 비동기 작업이 완료된 후 실행될 코드를 정의할 수 있다.
+코드 구조화: 특정 작업이 완료된 후 실행될 코드를 별도의 함수로 분리하여 코드의 가독성과 재사용성을 높일 수 있다.
+### 단점
+콜백 지옥: 중첩된 콜백 함수들이 많아지면 코드가 복잡해지고 가독성이 떨어지는 "콜백 지옥" 현상이 발생할 수 있다. 이를 해결하기 위해 Promise나 async/await을 사용할 수 있다.
+콜백 함수와 콜백 지옥
+콜백 지옥은 중첩된 콜백 함수들로 인해 코드의 가독성이 떨어지는 현상을 말한다. 아래는 콜백 지옥의 예시다.
+
+
+doSomething(function(result) {
+    doSomethingElse(result, function(newResult) {
+        doAnotherThing(newResult, function(finalResult) {
+            console.log(finalResult);
+        });
+    });
+});
+이런 경우, Promise나 async/await을 사용하여 코드의 가독성을 개선할 수 있다.
+
+콜백 함수 대신 Promise 사용
+Promise는 비동기 작업의 결과를 처리할 때 더 가독성이 좋은 방법을 제공한다.
+
+
+function fetchData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const data = { name: "John", age: 30 };
+            resolve(data);
+        }, 1000);
+    });
+}
+
+fetchData().then(data => {
+    console.log("Data received:", data);
+}).catch(error => {
+    console.error("Error:", error);
+});
+콜백 함수 대신 async/await 사용
+async/await는 비동기 코드를 동기 코드처럼 작성할 수 있게 한다.
+
+
+async function fetchData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const data = { name: "John", age: 30 };
+            resolve(data);
+        }, 1000);
+    });
+}
+
+async function handleData() {
+    try {
+        const data = await fetchData();
+        console.log("Data received:", data);
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+
+handleData();
+이렇게 Promise나 async/await를 사용하면 콜백 지옥을 피할 수 있고, 코드를 더 읽기 쉽게 작성할 수 있다.
