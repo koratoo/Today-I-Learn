@@ -1,0 +1,3 @@
+ehcache 환경설정
+
+timeToIdleSeconds : 캐시된 데이터가 사용되지 않은채로 유지되는 최대 시간
