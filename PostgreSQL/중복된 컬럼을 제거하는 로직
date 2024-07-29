@@ -1,0 +1,12 @@
+```sql
+WITH CTE AS (
+    SELECT ctid, ROW_NUMBER() OVER (PARTITION BY if_rec_num ORDER BY ctid) AS row_num
+    FROM 테이블명
+)
+DELETE FROM 테이블명
+WHERE ctid IN (
+    SELECT ctid
+    FROM CTE
+    WHERE row_num > 1
+);
+```
