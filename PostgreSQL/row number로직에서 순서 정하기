@@ -1,0 +1,4 @@
+
+ROW_NUMBER() OVER(order by 특정 컬럼 asc) AS rownum
+
+ 
