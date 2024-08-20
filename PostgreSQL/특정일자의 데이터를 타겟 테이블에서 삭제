@@ -1,0 +1,8 @@
+select * from 
+타겟 테이블
+where 키 in (
+select 키 from 
+[FROM테이블]
+)
+
+로 조회한 후 select * 대신 delete를 사용하여 삭제 한다.
