@@ -1,0 +1,2 @@
+함수 문법 {name} -> 권장
+클래스 문법 {this.props.name} -> 비권장
