@@ -1,2 +1,8 @@
 줄여서 NL JOIN이라고도 불리는 NESTED LOOP JOIN은 2개 이상의 테이블에서 
 하나의 집합을 기준으로 순차적으로 상대방의 Row를 결합하여 원하는 결과를 조합하는 조인 방식이다. 
+
+
+특징은 Random 액세스 위주의 조인 방식이라는 점이다.
+두번째 특징은 조인을 한 레코드씩 순차적으로 진행한다.
+
+참고 : https://m.cafe.daum.net/Oracle-/DImN/4?svc=cafeapi
