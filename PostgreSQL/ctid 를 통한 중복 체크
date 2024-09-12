@@ -1,0 +1,13 @@
+UPDATE 테이블A t1
+		SET 상태컬럼 = 'E'
+		WHERE ctid IN (
+		    SELECT ctid
+		    FROM (
+		        SELECT 
+		            t.ctid,
+		            ROW_NUMBER() OVER (PARTITION BY t.키 ORDER BY t.ctid DESC) AS rnum
+		        FROM 테이블A t
+		        WHERE t.상태컬럼 = 'A'
+		    ) s
+		    WHERE s.rnum > 1
+		)
