@@ -1,0 +1,3 @@
+실무에서 Left Join은 많이 쓰는데 간혹 성능이 안나오는 경우가 있다.
+이럴 경우 WHERE조건 절에 Not Exists나 Exists를 통해 튜닝을 하게 된다.
+
