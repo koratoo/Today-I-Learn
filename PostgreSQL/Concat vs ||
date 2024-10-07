@@ -1,0 +1,5 @@
+'TEST' || column
+vs
+Concat('Test',column)
+
+테스트 해봤는데 둘 중 후자가 빨랐다. 약 3배정도
