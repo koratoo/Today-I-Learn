@@ -1,0 +1,33 @@
+CASE WHEN 구문을 사용할 때 조건의 순서가 잘못되어 의도와 다른 결과가 나오는 경우
+
+
+잘못된 코드
+SELECT
+    student_name,
+    score,
+    CASE
+        WHEN score >= 60 THEN 'D'
+        WHEN score >= 70 THEN 'C'
+        WHEN score >= 80 THEN 'B'
+        WHEN score >= 90 THEN 'A'
+        ELSE 'F'
+    END AS grade
+FROM student_scores;
+
+
+수정된 코드
+SELECT
+    student_name,
+    score,
+    CASE
+        WHEN score >= 90 THEN 'A'
+        WHEN score >= 80 THEN 'B'
+        WHEN score >= 70 THEN 'C'
+        WHEN score >= 60 THEN 'D'
+        ELSE 'F'
+    END AS grade
+FROM student_scores;
+
+
+
+제일 처음 조건을 만족하면 그 뒤의 조건이 무시되기 때문에 이를 주의해서 쿼리문을 설계해야한다.
