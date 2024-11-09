@@ -1,0 +1,23 @@
+A,B가 동일한 컬럼을 가진 테이블이라고 가정한다.
+
+A에서 B까지 10000건만 insert하고 싶다면 어떻게 해야할까?
+
+
+단순하게 
+insert into B select * from A limit 10000;
+을 생각할 수 있지만 이런식의 쿼리는 불가하다.
+
+이때 WITH절을 써서
+WITH limited_rows AS (
+    SELECT 키
+    FROM A
+    WHERE 변경컬럼 ='전'
+    LIMIT 10000
+)
+UPDATE A
+SET 변경컬럼 ='후'
+WHERE 키 IN (SELECT 키 FROM limited_rows);
+
+이런식으로 A테이블에서 뽑을 데이터 10000건의 상태를 임의로 변경한뒤
+
+insert into B select * from A where 변경컬럼 = '후'를 하게 되면 1만건만 insert된다.
