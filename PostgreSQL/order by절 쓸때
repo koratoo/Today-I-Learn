@@ -1,0 +1,5 @@
+A,B 컬럼을 내림차순 정렬하라
+order by A, B desc (오답)
+
+정답
+order by A desc, B desc
