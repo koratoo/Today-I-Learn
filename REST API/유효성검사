@@ -1,8 +1,0 @@
-현재시점 보다 미래에 태어난 연도가 가능할까?
-  불가능할 것이다. 이를 REST API에서 체크해주어야 한다.
-
-  어떻게?
-
-  validation dependency를 추가해주고
-  @Valid 어노테이션을 붙인 후 jakarta를 import를 해준다.
-  @Past 어노테이션을 붙이면 이전 날짜로 유효성 검사를 해준다.
