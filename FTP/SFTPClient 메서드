@@ -1,7 +1,0 @@
-public void rm (String filename) throws IOException {
-    engine.remove(filename);
-}
-
-public void rmdir (String dirname) throws IOException {
-    engine.remove(dirname);
-}
