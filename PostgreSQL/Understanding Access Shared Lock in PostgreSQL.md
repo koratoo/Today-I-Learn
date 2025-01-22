@@ -1,6 +1,7 @@
 ```text
 가장 기본적인 잠금 유형 중 하나로, 읽기 작업을 위해 사용한다.
-이 작업은 데이터를 읽는 쿼리를 실행할 때 발생한다.```
+이 작업은 데이터를 읽는 쿼리를 실행할 때 발생한다.
+```
 
 **Understanding Access Shared Lock in PostgreSQL**
 
