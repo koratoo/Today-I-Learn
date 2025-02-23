@@ -1,4 +1,0 @@
-Dbeaver에서 컨트롤 shift E
-
-Seq Scan을 타면 인덱스 스캔을 안타는 것임
-Cost가 높은 곳을 찾아서 튜닝 하기.
