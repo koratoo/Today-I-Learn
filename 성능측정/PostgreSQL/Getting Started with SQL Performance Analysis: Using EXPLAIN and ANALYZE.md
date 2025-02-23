@@ -1,3 +1,79 @@
+# Getting Started with SQL Performance Analysis: Using EXPLAIN and ANALYZE
+
+When using a database, there are many situations where you need to analyze query performance. Especially when dealing with large datasets or queries involving complex joins, execution speed can become slow. To address these issues, let’s explore how to use **EXPLAIN** and **ANALYZE**.
+
+## 1. What is EXPLAIN?
+**EXPLAIN** analyzes the execution plan of an SQL query in advance and shows how it will be executed. The execution plan includes information such as the indexes used, join methods, and estimated execution cost.
+
+### Example Usage:
+```sql
+EXPLAIN SELECT * FROM employees;
+```
+Executing this command displays the execution plan for retrieving data from the `employees` table.
+
+## 2. What is ANALYZE?
+**ANALYZE** is a command that executes the query while collecting execution time and statistics. Unlike EXPLAIN, it does not provide an estimate but rather analyzes actual execution data.
+
+### Example Usage:
+```sql
+ANALYZE SELECT * FROM employees;
+```
+This command collects execution statistics while actually retrieving data from the `employees` table.
+
+## 3. Combining EXPLAIN and ANALYZE
+Using `EXPLAIN` and `ANALYZE` together allows you to compare the expected execution plan with actual execution results.
+
+### Example Usage:
+```sql
+EXPLAIN ANALYZE SELECT * FROM employees;
+```
+Executing this command provides the following information:
+- **Execution Time**
+- **Estimated Cost**
+- **Indexes Used**
+- **Rows Retrieved**
+
+Using this information, you can optimize query performance.
+
+## 4. How to Interpret Execution Plans
+Here’s a simple explanation of how to interpret the results of EXPLAIN ANALYZE.
+
+```sql
+Seq Scan on employees  (cost=0.00..15.70 rows=570 width=244) (actual time=0.010..0.040 rows=10 loops=1)
+```
+- **Seq Scan**: Sequential scan method used to retrieve table data
+- **cost=0.00..15.70**: Query execution cost (lower is better)
+- **rows=570**: Estimated number of result rows
+- **actual time=0.010..0.040**: Actual execution time (unit: ms)
+- **loops=1**: Number of times executed
+
+## 5. Query Optimization Methods
+After identifying performance bottlenecks using EXPLAIN ANALYZE, you can optimize your queries using the following methods:
+
+1. **Add Indexes**
+   - Create an index on columns frequently used in the WHERE clause
+   ```sql
+   CREATE INDEX idx_name ON employees(name);
+   ```
+2. **Optimize Joins**
+   - Remove unnecessary joins or use appropriate indexes
+3. **Use LIMIT**
+   - Retrieve only the required data instead of fetching the entire dataset
+   ```sql
+   SELECT * FROM employees LIMIT 10;
+   ```
+4. **Analyze EXPLAIN Results**
+   - Adjust queries so that Index Scan is used instead of Seq Scan
+   - Compare estimated and actual row counts to update statistics
+
+## 6. Conclusion
+EXPLAIN and ANALYZE are essential tools for analyzing and optimizing SQL query performance. By reviewing execution plans, adding indexes, and modifying join methods, you can ensure faster and more efficient database operations.
+
+If you experience slow query performance, start by running EXPLAIN ANALYZE to diagnose the issue!
+
+---
+
+
 # SQL 성능 분석의 시작: EXPLAIN과 ANALYZE 활용하기
 
 데이터베이스를 사용하다 보면 쿼리의 성능을 분석해야 하는 경우가 많습니다. 특히, 대량의 데이터를 다루거나 복잡한 조인(join) 연산이 포함된 경우에는 실행 속도가 느려질 수 있습니다. 이러한 문제를 해결하기 위해 **EXPLAIN**과 **ANALYZE**를 활용하는 방법을 알아보겠습니다.
